@@ -14,7 +14,7 @@ class Parser
      */
     protected $internalHosts = [];
 
-    public function __construct(ConfigReaderInterface $configReader = null, array $internalHosts = [])
+    public function __construct(?ConfigReaderInterface $configReader = null, array $internalHosts = [])
     {
         $this->configReader = $configReader ?: static::createDefaultConfigReader();
         $this->internalHosts = $internalHosts;
